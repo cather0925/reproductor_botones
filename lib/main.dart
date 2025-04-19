@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() => runApp(MaterialApp(home: MusicPlayer()));
+void main() => runApp(MaterialApp(
+  home: MusicPlayer(),
+  debugShowCheckedModeBanner: false,
+  
+  ));
 
 class MusicPlayer extends StatefulWidget {
   const MusicPlayer({super.key});
@@ -40,7 +44,10 @@ class _MusicPlayerState extends State<MusicPlayer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Reproductor MP3')),
+      appBar: AppBar(title: Text('Reproductor MP3'),
+      centerTitle: true,
+      ),
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
